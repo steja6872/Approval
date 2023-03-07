@@ -22,3 +22,18 @@ jobs:
         with:
           environment: Dev_Environment
           token: ${{ secrets.TOKEN }}
+
+      - name: Manual Workflow Approval
+        uses: trstringer/manual-approval@v1.9.0
+        with:
+          approvers: srinivasareddy4218,skrafiq
+          secret: ${{ secrets.TOKEN }}
+          minimum-approvals: 1 
+
+
+    
+    
+
+   
+
+   
