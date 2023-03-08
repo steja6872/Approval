@@ -1,0 +1,16 @@
+name: Only manual approval
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run one line script
+        run: echo hello world
+             
+      - name: Manual Workflow Approval
+        uses: trstringer/manual-approval@v1
+        with:
+          approvers: steja6872
+          secret: ${{ secrets.TOKEN }}
+          minimum-approvals: 1 
