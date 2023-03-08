@@ -1,0 +1,17 @@
+name: Deploy to Dev.
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Dev_Environment
+    steps:
+      - name: Run one line script
+        run: echo hello world
+             
+      - name: Manual Workflow Approval
+        uses: trstringer/manual-approval@v1.9.0
+        with:
+          approvers: srinivasareddy4218,skrafiq,Trimukesh
+          secret: ${{ secrets.TOKEN }}
+          minimum-approvals: 1 
