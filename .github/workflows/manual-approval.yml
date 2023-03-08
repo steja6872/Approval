@@ -5,12 +5,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Run one line script
-        run: echo hello world
-             
-      - name: Manual Workflow Approval
-        uses: trstringer/manual-approval@v1
+      - uses: trstringer/manual-approval@v1
         with:
           approvers: Trimukesh,skrafiq
           secret: ${{ secrets.TOKEN }}
           minimum-approvals: 1 
+          
+      - name: Run the script
+        run: echo hello world
