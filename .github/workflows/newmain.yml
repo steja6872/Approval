@@ -10,7 +10,7 @@ jobs:
         run: echo hello world
              
       - name: Manual Workflow Approval
-        uses: trstringer/manual-approval@v1.9.0
+        uses: trstringer/manual-approval@v1
         with:
           approvers: srinivasareddy4218,skrafiq,Trimukesh
           secret: ${{ secrets.TOKEN }}
