@@ -11,6 +11,6 @@ jobs:
       - name: Manual Workflow Approval
         uses: trstringer/manual-approval@v1
         with:
-          approvers: steja6872
+          approvers: Trimukesh,skrafiq
           secret: ${{ secrets.TOKEN }}
           minimum-approvals: 1 
